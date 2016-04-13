@@ -6,21 +6,24 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * Created by aharshbe on 4/13/16.
+ */
+public class intend1Activity extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.intend1);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton addButton1 = (FloatingActionButton) findViewById(R.id.addButton);
+        FloatingActionButton addButton1intend1 = (FloatingActionButton) findViewById(R.id.addButton);
 
-        addButton1.setOnClickListener(new View.OnClickListener() {
+        addButton1intend1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Your new list was added!", Snackbar.LENGTH_LONG)
@@ -29,9 +32,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        FloatingActionButton removeButton1 = (FloatingActionButton) findViewById(R.id.removeButton);
+        FloatingActionButton removeButton1intend1 = (FloatingActionButton) findViewById(R.id.removeButton);
 
-        removeButton1.setOnClickListener(new View.OnClickListener() {
+        removeButton1intend1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "List was removed!", Snackbar.LENGTH_LONG)
@@ -67,4 +70,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void addContent(View view) {
     }
+
+
+
+
+
+
 }
