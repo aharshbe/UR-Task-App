@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         addButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Your new list was added!", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         removeButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "List was removed!", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
