@@ -13,7 +13,7 @@
     tools:showIn="@layout/activity_main">
 
     <TextView
-        android:layout_width="1000dp"
+        android:layout_width="388dp"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Hello List"
@@ -26,7 +26,7 @@
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="1000dp"
+        android:layout_width="388dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
         android:text="Goodbye List"
@@ -38,7 +38,7 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="1000dp"
+        android:layout_width="388dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
         android:text="Welcome List"
@@ -50,7 +50,7 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="1000dp"
+        android:layout_width="388dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView2"
         android:text="Opening Task List"
@@ -62,7 +62,7 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="1000dp"
+        android:layout_width="388dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView3"
         android:text="Closing Task List"
