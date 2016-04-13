@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -62,9 +63,32 @@ public class MainActivity extends AppCompatActivity {
 //        return super.onOptionsItemSelected(item);
 //    }
 
-    public void removeContent(View view) {
+
+
+    public static final String ACIONT_VIEW() {
+
+
+        return ACIONT_VIEW();
     }
 
-    public void addContent(View view) {
+
+    public void seeToDosHelloList(View view) {
+        getIntent();
+    }
+
+    public void seeToDosGoodbyeList(View view) {
+        getIntent();
+    }
+
+    public void seeToDosWelcomeList(View view) {
+        getIntent();
+    }
+
+    public void seeToDosOpeningList(View view) {
+        getIntent();
+    }
+
+    public void seeToDosClosingTaskList(View view) {
+        getIntent();
     }
 }

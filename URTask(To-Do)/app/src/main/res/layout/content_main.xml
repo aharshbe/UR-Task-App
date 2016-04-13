@@ -24,6 +24,7 @@
         android:background="#EEE8AA"
         android:textColor="#F0FFFF"
         android:padding="10dp"
+        android:onClick="seeToDosHelloList"
         />
 
     <TextView
@@ -35,7 +36,8 @@
         android:textSize="35dp"
         android:textColor="#F0FFFF"
         android:background="#98FB98"
-        android:padding="10dp" />
+        android:padding="10dp"
+        android:onClick="seeToDosGoodbyeList"/>
 
 
     <TextView
@@ -47,7 +49,8 @@
         android:textSize="35dp"
         android:textColor="#F0FFFF"
         android:background="#AFEEEE"
-        android:padding="10dp" />
+        android:padding="10dp"
+        android:onClick="seeToDosWelcomeList"/>
 
 
     <TextView
@@ -59,7 +62,8 @@
         android:textSize="35dp"
         android:textColor="#F0FFFF"
         android:background="#F4A460"
-        android:padding="10dp" />
+        android:padding="10dp"
+        android:onClick="seeToDosOpeningList"/>
 
 
     <TextView
@@ -71,7 +75,8 @@
         android:textSize="35dp"
         android:textColor="#F0FFFF"
         android:background="#DDA0DD"
-        android:padding="10dp" />
+        android:padding="10dp"
+        android:onClick="seeToDosClosingTaskList"/>
 
 
 </RelativeLayout>
