@@ -28,7 +28,6 @@ public class intend1Activity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Your new list was added!", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-
             }
         });
 
@@ -42,9 +41,6 @@ public class intend1Activity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-
-
-
     }
 
 //    @Override
