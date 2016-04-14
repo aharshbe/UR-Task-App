@@ -49,9 +49,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.removeButton);
-        fab.setOnClickListener(new View.OnClickListener() {
+        FloatingActionButton fab2 = (FloatingActionButton) findViewById(R.id.removeButton);
+        fab2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "List Removed", Snackbar.LENGTH_SHORT)
