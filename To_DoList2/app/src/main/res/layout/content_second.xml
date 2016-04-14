@@ -23,7 +23,6 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:hint="Create new To-Do here!"
-        android:textColor="#00FFFF"
         android:textStyle="italic"/>
 
     <ListView
@@ -32,7 +31,6 @@
         android:id="@+id/ToDoLists1"
         android:layout_below="@+id/editText"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="42dp"
-        android:layout_above="@+id/addButtonIntent" />
+        android:layout_marginTop="42dp"/>
 
 </RelativeLayout>
