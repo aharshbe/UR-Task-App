@@ -35,21 +35,32 @@ public class MainActivity extends AppCompatActivity {
         mToDoList.add("Closing List");
 
 
-        mAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,mToDoList);
-        ListView listView = (ListView)findViewById(R.id.ToDoLists1);
+        mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mToDoList);
+        ListView listView = (ListView) findViewById(R.id.ToDoLists1);
         listView.setAdapter(mAdapter);
-
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.addButton);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "List Added", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show();
             }
         });
+
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.removeButton);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "List Removed", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show();
+            }
+        });
+
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
