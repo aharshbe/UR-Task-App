@@ -3,4 +3,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_marginTop="61dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:hint="Create new To-Do here!"
+        android:textColor="#00FFFF"
+        android:textStyle="italic"/>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ToDoLists1"
+        android:layout_below="@+id/editText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:layout_above="@+id/addButtonIntent" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addButtonIntent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:src="@android:drawable/ic_menu_add"
+        android:background="#4B0082"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
 </RelativeLayout>

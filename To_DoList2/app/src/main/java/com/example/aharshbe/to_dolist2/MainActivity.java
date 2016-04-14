@@ -79,8 +79,8 @@ public class MainActivity extends AppCompatActivity {
 
                 }
 
-                Snackbar.make(view, "List Added", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show();
+                //Snackbar.make(view, "List Added", Snackbar.LENGTH_SHORT)
+                //        .setAction("Action", null).show();
             }
         });
 
