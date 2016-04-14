@@ -13,7 +13,22 @@
     tools:showIn="@layout/activity_main">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="UR Do List!"
+        android:textSize="49dp"
+        android:textColor="#4B0082"
+        android:id="@+id/Heading" />
+
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="365dp"
+        android:id="@+id/ToDoLists1"
+        android:layout_below="@+id/Heading"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/Heading"
+        android:layout_alignEnd="@+id/Heading" />
+
 </RelativeLayout>
