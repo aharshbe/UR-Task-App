@@ -44,6 +44,12 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                if (mToDoList.size() <=0){
+                    //mToDoList.add(0);
+                    mAdapter.notifyDataSetChanged();
+                }
+
                 Snackbar.make(view, "List Added", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show();
             }
