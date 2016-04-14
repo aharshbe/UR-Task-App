@@ -8,8 +8,16 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class MainActivity extends AppCompatActivity {
+
+    LinkedList<String> mToDoList;
+    ArrayAdapter<String> mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +25,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
+        mToDoList = new LinkedList<>();
+        mToDoList.add("Hello List");
+        mToDoList.add("Welcome List");
+        mToDoList.add("Goodbye List");
+        mToDoList.add("Opening List");
+        mToDoList.add("Closing List");
+
+
+        mAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,mToDoList);
+        ListView listView = (ListView)findViewById(R.id.ToDoLists1);
+        listView.setAdapter(mAdapter);
+
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
