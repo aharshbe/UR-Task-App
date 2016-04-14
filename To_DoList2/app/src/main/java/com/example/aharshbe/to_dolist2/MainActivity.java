@@ -1,6 +1,6 @@
 package com.example.aharshbe.to_dolist2;
 
-import android.os.Bundle;
+import  android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -123,4 +123,12 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+
+
+    //Creating click listener for the listView click
+   // public void clickingList(View view) {
+
+   // }
 }
