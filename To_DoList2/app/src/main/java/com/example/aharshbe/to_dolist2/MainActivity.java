@@ -93,22 +93,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-//        FloatingActionButton fab2 = (FloatingActionButton) findViewById(R.id.removeButton);
-//        fab2.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//                if (mToDoList.size() >=1) {
-//                    mToDoList.remove(0);
-//                    mAdapter.notifyDataSetChanged();
-//                }
-//
-//                Snackbar.make(view, "List Removed", Snackbar.LENGTH_SHORT)
-//                        .setAction("Action", null).show();
-//            }
-//        });
-
     }
 
 
