@@ -8,7 +8,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -18,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     LinkedList<String> mToDoList;
     ArrayAdapter<String> mAdapter;
+    EditText editText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
+        editText = (EditText) findViewById(R.id.editText);
+
         mToDoList = new LinkedList<>();
         mToDoList.add("Hello List");
         mToDoList.add("Welcome List");
@@ -35,19 +40,34 @@ public class MainActivity extends AppCompatActivity {
         mToDoList.add("Closing List");
 
 
+
         mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mToDoList);
         ListView listView = (ListView) findViewById(R.id.ToDoLists1);
+
         listView.setAdapter(mAdapter);
 
+
+        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                mToDoList.remove(position);
+                mAdapter.notifyDataSetChanged();
+                return true;
+            }
+        });
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.addButton);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String addingText = editText.getText().toString();
 
-                if (mToDoList.size() <=0){
+                if (addingText.length() >0){
+                    mToDoList.add(addingText);
                     //mToDoList.add(0);
                     mAdapter.notifyDataSetChanged();
+                    editText.setText("");
+
                 }
 
                 Snackbar.make(view, "List Added", Snackbar.LENGTH_SHORT)
