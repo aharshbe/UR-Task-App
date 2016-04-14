@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(MainActivity.this, intent_activity.class);
-                intent.putExtra("movingOver", 0);
+                intent.putExtra("Hello",0 );
                 startActivity(intent);
 
             }

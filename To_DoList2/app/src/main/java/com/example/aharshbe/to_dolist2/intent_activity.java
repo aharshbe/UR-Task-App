@@ -9,7 +9,9 @@ import android.content.Intent;
 
 public class intent_activity {
     Intent intent = getIntent();
-    int importedData = intent.getIntExtra("movingOver", 0);
+    int importedData = intent.getIntExtra("Hello", 0);
+
+
 
 
 
