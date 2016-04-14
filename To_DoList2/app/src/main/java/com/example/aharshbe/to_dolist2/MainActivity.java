@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     LinkedList<String> mToDoList;
     ArrayAdapter<String> mAdapter;
+    //Reserving memeory for the edit text to be referenced later
     EditText editText;
 
     @Override
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
+        //Referencing the XML location for the edit text..and calling after main method runs XML
         editText = (EditText) findViewById(R.id.editText);
 
         mToDoList = new LinkedList<>();
@@ -47,11 +49,16 @@ public class MainActivity extends AppCompatActivity {
         listView.setAdapter(mAdapter);
 
 
+        //Removes a object on the list based on a long press, subsitutes having to use the extra remove button
+
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                //Removed a list item at it's position as a parameter
                 mToDoList.remove(position);
+                //Notifying the adapter that the list did in fact change via removing from press @ position
                 mAdapter.notifyDataSetChanged();
+                //returning true..obyy. lol
                 return true;
             }
         });
@@ -60,12 +67,14 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //creating a new string reference edit text and changing it to a string
                 String addingText = editText.getText().toString();
 
                 if (addingText.length() >0){
                     mToDoList.add(addingText);
                     //mToDoList.add(0);
                     mAdapter.notifyDataSetChanged();
+                    //clearing out edit text after input is give from button
                     editText.setText("");
 
                 }
