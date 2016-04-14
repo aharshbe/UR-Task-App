@@ -3,7 +3,6 @@ package com.example.aharshbe.to_dolist2;
 import android.content.Intent;
 import  android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -14,7 +13,6 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class MainActivity extends AppCompatActivity {
@@ -86,9 +84,12 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(MainActivity.this, intent_activity.class);
-                intent.putExtra("Hello",0 );
-                startActivity(intent);
+
+
+               Intent myIntent = new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(myIntent);
+
+
 
             }
         });
