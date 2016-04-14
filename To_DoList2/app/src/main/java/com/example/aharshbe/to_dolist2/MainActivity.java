@@ -1,5 +1,6 @@
 package com.example.aharshbe.to_dolist2;
 
+import android.content.Intent;
 import  android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -37,9 +38,6 @@ public class MainActivity extends AppCompatActivity {
         mToDoList = new LinkedList<>();
         mToDoList.add("Hello List");
         mToDoList.add("Welcome List");
-        mToDoList.add("Goodbye List");
-        mToDoList.add("Opening List");
-        mToDoList.add("Closing List");
 
 
 
@@ -81,6 +79,17 @@ public class MainActivity extends AppCompatActivity {
 
                 //Snackbar.make(view, "List Added", Snackbar.LENGTH_SHORT)
                 //        .setAction("Action", null).show();
+            }
+        });
+
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(MainActivity.this, intent_activity.class);
+                intent.putExtra("movingOver", 0);
+                startActivity(intent);
+
             }
         });
 
