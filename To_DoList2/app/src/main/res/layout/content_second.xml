@@ -31,7 +31,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:hint="Enter new To-Do here!"
+        android:hint="Enter UR To-Do :-) here!"
         android:textStyle="italic"/>
 
     <ListView
