@@ -1,7 +1,7 @@
 package com.example.aharshbe.to_dolist2;
 
 import android.content.Intent;
-import  android.os.Bundle;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 //creating a new string reference edit text and changing it to a string
                 String addingText = editText.getText().toString();
 
-                if (addingText.length() >0){
+                if (addingText.length() > 0) {
                     mToDoList.add(addingText);
                     //mToDoList.add(0);
                     mAdapter.notifyDataSetChanged();
@@ -73,19 +73,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent myIntent = new Intent(MainActivity.this, SecondActivity.class);
-                myIntent.putExtra("position",position);
+                myIntent.putExtra("position", position);
                 String nameOfListPrior = mToDoList.get(position);
-                myIntent.putExtra("nameOfListPrior",nameOfListPrior);
+                myIntent.putExtra("nameOfListPrior", nameOfListPrior);
                 startActivity(myIntent);
             }
         });
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will

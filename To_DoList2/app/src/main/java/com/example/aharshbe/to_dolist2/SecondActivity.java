@@ -62,12 +62,11 @@ public class SecondActivity extends AppCompatActivity {
 
                 String addingText = editText.getText().toString();
 
-                if (addingText.length() >0){
+                if (addingText.length() > 0) {
                     mToDos.add(addingText);
                     mAdapter.notifyDataSetChanged();
                     //clearing out edit text after input is give from button
                     editText.setText("");
-
 
 
                 }
