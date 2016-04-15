@@ -11,8 +11,9 @@
 ![](Resource/Paper Prototype_ To-Do List App3.jpg)
 
 ##Actually, just kidding, here's the more realistic prototype ;-)
-![](Resource/Second Paper Prototype 1.jpg)
 ![](Resource/Second Paper Prototype 2.jpg)
+![](Resource/Second Paper Prototype 1.jpg)
+
 
 
 ## Requirements
