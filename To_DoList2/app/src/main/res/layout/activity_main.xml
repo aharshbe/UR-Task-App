@@ -31,17 +31,4 @@
         android:layout_margin="@dimen/fab_margin"
         android:src="@android:drawable/ic_menu_save"
         android:background="#4B0082"/>
-
-
-    <!--<android.support.design.widget.FloatingActionButton-->
-        <!--android:id="@+id/removeButton"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_gravity="bottom|right"-->
-        <!--android:layout_margin="@dimen/fab_margin"-->
-        <!--android:src="@android:drawable/ic_delete"-->
-        <!--android:background="#4B0082"/>-->
-
-
-
-</android.support.design.widget.CoordinatorLayout>
+    </android.support.design.widget.CoordinatorLayout>

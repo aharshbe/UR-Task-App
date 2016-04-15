@@ -36,18 +36,10 @@ public class SecondActivity extends AppCompatActivity {
         String positionWithName = getIntent().getStringExtra("nameOfListPrior");
         textView.setText(String.valueOf("UR List:" + " " + positionWithName));
 
-
-
-
-
-
         mToDos = new LinkedList<>();
-//        mToDos.add("Hello");
-//        mToDos.add("Away");
 
+        mAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, mToDos);
 
-
-        mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mToDos);
         ListView listView = (ListView) findViewById(R.id.ToDoLists1);
 
         listView.setAdapter(mAdapter);
@@ -63,9 +55,6 @@ public class SecondActivity extends AppCompatActivity {
                 return true;
             }
         });
-
-
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,23 +71,12 @@ public class SecondActivity extends AppCompatActivity {
 
 
                 }
-
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
             }
         });
-
-
-
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-
                 Toast.makeText(getApplicationContext(), "Long press to delete :(", Toast.LENGTH_SHORT).show();
-
-
-
             }
         });
     }

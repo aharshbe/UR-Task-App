@@ -31,22 +31,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
         //Referencing the XML location for the edit text..and calling after main method runs XML
+
         editText = (EditText) findViewById(R.id.editText);
-
         mToDoList = new LinkedList<>();
-//        mToDoList.add("Hello List");
-//        mToDoList.add("Welcome List");
-
-
-
         mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mToDoList);
         ListView listView = (ListView) findViewById(R.id.ToDoLists1);
-
         listView.setAdapter(mAdapter);
-
 
         //Removes a object on the list based on a long press, subsitutes having to use the extra remove button
 
@@ -61,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.addButton);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,45 +67,25 @@ public class MainActivity extends AppCompatActivity {
                     editText.setText("");
 
                 }
-
-                //Snackbar.make(view, "List Added", Snackbar.LENGTH_SHORT)
-                //        .setAction("Action", null).show();
             }
         });
-
-
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-
-               Intent myIntent = new Intent(MainActivity.this, SecondActivity.class);
+                Intent myIntent = new Intent(MainActivity.this, SecondActivity.class);
                 myIntent.putExtra("position",position);
                 String nameOfListPrior = mToDoList.get(position);
                 myIntent.putExtra("nameOfListPrior",nameOfListPrior);
                 startActivity(myIntent);
-
-
-
-
-
-
-
-
-
-
             }
         });
     }
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -130,12 +100,4 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-
-
-
-    //Creating click listener for the listView click
-   // public void clickingList(View view) {
-
-   // }
 }
