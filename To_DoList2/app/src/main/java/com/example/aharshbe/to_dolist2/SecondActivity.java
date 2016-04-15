@@ -33,7 +33,6 @@ public class SecondActivity extends AppCompatActivity {
 
         editText = (EditText) findViewById(R.id.editText);
         textView = (TextView) findViewById(R.id.textView);
-//        int positionP = getIntent().getIntExtra("position", 0);
         String positionWithName = getIntent().getStringExtra("nameOfListPrior");
         textView.setText(String.valueOf(positionWithName));
 
@@ -76,7 +75,6 @@ public class SecondActivity extends AppCompatActivity {
 
                 if (addingText.length() >0){
                     mToDos.add(addingText);
-                    //mToDoList.add(0);
                     mAdapter.notifyDataSetChanged();
                     //clearing out edit text after input is give from button
                     editText.setText("");
@@ -97,7 +95,7 @@ public class SecondActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
 
-                Toast.makeText(getApplicationContext(), "You have won", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "You have won ;-)", Toast.LENGTH_SHORT).show();
 
 
 
