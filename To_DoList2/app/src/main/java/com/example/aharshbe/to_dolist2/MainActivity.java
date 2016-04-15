@@ -89,6 +89,8 @@ public class MainActivity extends AppCompatActivity {
                Intent myIntent = new Intent(MainActivity.this, SecondActivity.class);
                 startActivity(myIntent);
 
+                mToDoList.get(position);
+
 
 
             }
