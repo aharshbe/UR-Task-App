@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
         editText = (EditText) findViewById(R.id.editText);
 
         mToDoList = new LinkedList<>();
-        mToDoList.add("Hello List");
-        mToDoList.add("Welcome List");
+//        mToDoList.add("Hello List");
+//        mToDoList.add("Welcome List");
 
 
 
@@ -92,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
                Intent myIntent = new Intent(MainActivity.this, SecondActivity.class);
                 myIntent.putExtra("position",position);
                 startActivity(myIntent);
+
 
 
 

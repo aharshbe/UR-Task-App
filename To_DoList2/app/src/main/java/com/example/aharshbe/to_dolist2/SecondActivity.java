@@ -40,8 +40,8 @@ public class SecondActivity extends AppCompatActivity {
 
 
         mToDos = new LinkedList<>();
-        mToDos.add("Hello");
-        mToDos.add("Away");
+//        mToDos.add("Hello");
+//        mToDos.add("Away");
 
 
 
