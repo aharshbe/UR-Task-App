@@ -95,7 +95,7 @@ public class SecondActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
 
-                Toast.makeText(getApplicationContext(), "You have won ;-)", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Long press to delete :(", Toast.LENGTH_SHORT).show();
 
 
 
