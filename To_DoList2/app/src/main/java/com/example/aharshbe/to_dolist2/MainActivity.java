@@ -61,10 +61,20 @@ public class MainActivity extends AppCompatActivity {
 
                 if (addingText.length() > 0) {
                     mToDoList.add(addingText);
-                    //mToDoList.add(0);
+
                     mAdapter.notifyDataSetChanged();
+
+                    ArrayList<String> arrayOfArray = new ArrayList<>();
+
+                    arrayClass.ToDoListsArray.add(addingText);
+                    arrayClass.ToDoObjectsArray.add(arrayOfArray);
+
+                    mAdapter.notifyDataSetChanged();
+
                     //clearing out edit text after input is give from button
                     editText.setText("");
+
+
 
                 }
             }

@@ -1,9 +1,7 @@
 package com.example.aharshbe.to_dolist2;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -14,7 +12,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class SecondActivity extends AppCompatActivity {
@@ -33,7 +30,7 @@ public class SecondActivity extends AppCompatActivity {
 
         editText = (EditText) findViewById(R.id.editText);
         textView = (TextView) findViewById(R.id.textView);
-        String positionWithName = getIntent().getStringExtra("nameOfListPrior");
+        final String positionWithName = getIntent().getStringExtra("nameOfListPrior");
         textView.setText(String.valueOf("UR List:" + " " + positionWithName));
 
         mToDos = new LinkedList<>();
@@ -56,6 +53,7 @@ public class SecondActivity extends AppCompatActivity {
             }
         });
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,6 +65,11 @@ public class SecondActivity extends AppCompatActivity {
                     mAdapter.notifyDataSetChanged();
                     //clearing out edit text after input is give from button
                     editText.setText("");
+
+                  //Tried to get data to persist and think I'm pretty close but couldn't figure it out sadly.
+
+                    //  arrayClass.ToDoObjectsArray.get(positionWithName).add(addingText);
+                    // mAdapter.notifyDataSetChanged();
 
 
                 }
