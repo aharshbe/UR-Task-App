@@ -66,7 +66,7 @@ public class SecondActivity extends AppCompatActivity {
                     //clearing out edit text after input is give from button
                     editText.setText("");
 
-                  //Tried to get data to persist and think I'm pretty close but couldn't figure it out sadly.
+                    //Tried to get data to persist and think I'm pretty close but couldn't figure it out sadly.
 
                     //  arrayClass.ToDoObjectsArray.get(positionWithName).add(addingText);
                     // mAdapter.notifyDataSetChanged();
