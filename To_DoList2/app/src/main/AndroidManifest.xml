@@ -20,7 +20,7 @@
         </activity>
         <activity
             android:name=".SecondActivity"
-            android:label="UR Task :-)"
+            android:label="URTask"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
