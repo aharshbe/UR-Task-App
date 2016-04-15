@@ -12,7 +12,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayAdapter<String> mAdapter;
     //Reserving memeory for the edit text to be referenced later
     EditText editText;
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,9 +90,12 @@ public class MainActivity extends AppCompatActivity {
 
 
                Intent myIntent = new Intent(MainActivity.this, SecondActivity.class);
+                myIntent.putExtra("position",position);
                 startActivity(myIntent);
 
-                mToDoList.get(position);
+
+
+
 
 
 

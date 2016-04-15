@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -21,6 +22,7 @@ public class SecondActivity extends AppCompatActivity {
     LinkedList<String> mToDos;
     ArrayAdapter<String> mAdapter;
     EditText editText;
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +32,17 @@ public class SecondActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         editText = (EditText) findViewById(R.id.editText);
+        textView = (TextView) findViewById(R.id.textView);
+        int positionP = getIntent().getIntExtra("position", 0);
+        textView.setText(String.valueOf(positionP));
+
+
+
 
         mToDos = new LinkedList<>();
         mToDos.add("Hello");
         mToDos.add("Away");
+
 
 
         mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mToDos);
@@ -53,6 +62,8 @@ public class SecondActivity extends AppCompatActivity {
             }
         });
 
+
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +77,8 @@ public class SecondActivity extends AppCompatActivity {
                     mAdapter.notifyDataSetChanged();
                     //clearing out edit text after input is give from button
                     editText.setText("");
+
+
 
                 }
 
