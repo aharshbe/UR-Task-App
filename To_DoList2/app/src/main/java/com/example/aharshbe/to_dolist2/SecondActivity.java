@@ -34,7 +34,7 @@ public class SecondActivity extends AppCompatActivity {
         editText = (EditText) findViewById(R.id.editText);
         textView = (TextView) findViewById(R.id.textView);
         String positionWithName = getIntent().getStringExtra("nameOfListPrior");
-        textView.setText(String.valueOf(positionWithName));
+        textView.setText(String.valueOf("UR List:" + " " + positionWithName));
 
 
 
