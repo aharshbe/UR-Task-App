@@ -1,5 +1,6 @@
 package com.example.aharshbe.to_dolist2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -30,7 +32,7 @@ public class SecondActivity extends AppCompatActivity {
         editText = (EditText) findViewById(R.id.editText);
 
         mToDos = new LinkedList<>();
-        mToDos.add("Go");
+        mToDos.add("Hello");
         mToDos.add("Away");
 
 
@@ -69,6 +71,20 @@ public class SecondActivity extends AppCompatActivity {
 
 //                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                        .setAction("Action", null).show();
+            }
+        });
+
+
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+
+                Toast.makeText(getApplicationContext(), "You have won", Toast.LENGTH_SHORT).show();
+
+
+
             }
         });
     }
