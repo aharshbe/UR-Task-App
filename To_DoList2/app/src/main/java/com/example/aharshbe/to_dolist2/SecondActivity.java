@@ -33,8 +33,11 @@ public class SecondActivity extends AppCompatActivity {
 
         editText = (EditText) findViewById(R.id.editText);
         textView = (TextView) findViewById(R.id.textView);
-        int positionP = getIntent().getIntExtra("position", 0);
-        textView.setText(String.valueOf(positionP));
+//        int positionP = getIntent().getIntExtra("position", 0);
+        String positionWithName = getIntent().getStringExtra("nameOfListPrior");
+        textView.setText(String.valueOf(positionWithName));
+
+
 
 
 

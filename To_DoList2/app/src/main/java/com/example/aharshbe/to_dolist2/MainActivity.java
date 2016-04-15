@@ -91,7 +91,11 @@ public class MainActivity extends AppCompatActivity {
 
                Intent myIntent = new Intent(MainActivity.this, SecondActivity.class);
                 myIntent.putExtra("position",position);
+                String nameOfListPrior = mToDoList.get(position);
+                myIntent.putExtra("nameOfListPrior",nameOfListPrior);
                 startActivity(myIntent);
+
+
 
 
 
